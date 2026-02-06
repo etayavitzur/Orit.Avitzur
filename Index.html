@@ -1,165 +1,131 @@
 <!DOCTYPE html>
 
 <html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>עינת עדן - פסיכותרפיסטית</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="עינת עדן - פסיכותרפיסטית. טיפול מקצועי בחרדה, טראומה ומשברי חיים. מרחב בטוח להקשבה ולצמיחה אישית.">
+            <title>עינת עדן - פסיכותרפיסטית | מרחב בטוח לריפוי והתחזקות</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Alef:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-header">
-                <h1>עינת עדן</h1>
-                <p class="subtitle">פסיכותרפיסטית</p>
-            </div>
-        </div>
-    </nav>
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+                    <div class="nav-container">
+                                    <div class="menu-toggle" id="menuToggle" aria-label="פתח תפריט">
+                                                        <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                    </div>div>
+                                <div class="nav-header">
+                                                <h1>עינת עדן</h1>
+                                                <p class="subtitle">פסיכותרפיסטית</p>p>
+                                </div>div>
+                    </div>div>
+        </nav>nav>
 
 ```
 <!-- Side Menu -->
 <div class="side-menu" id="sideMenu">
-    <div class="close-btn" id="closeMenu">&times;</div>
-    <div class="menu-header">
-        <h2>עינת עדן</h2>
-        <p>פסיכותרפיסטית</p>
-    </div>
-    <ul class="menu-items">
-        <li><a href="#home">בית</a></li>
-        <li><a href="#about">אודות</a></li>
-        <li><a href="#areas">תחומי טיפול</a></li>
-        <li><a href="#clinic">הקליניקה</a></li>
-        <li><a href="#contact">צרו קשר</a></li>
-    </ul>
-</div>
+    <div class="menu-overlay" id="menuOverlay"></div>div>
+    <div class="menu-content">
+            <div class="close-btn" id="closeMenu" aria-label="סגור תפריט">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>line>
+                        </svg>svg>
+            </div>div>
+            <div class="menu-header">
+                        <h2>עינת עדן</h2>
+                        <p>פסיכותרפיסטית</p>
+            </div>div>
+            <ul class="menu-items">
+                        <li><a href="#home" data-section="home">בית</a>a></li>
+                        <li><a href="#about" data-section="about">אודות</a>a></li>
+                        <li><a href="#approach" data-section="approach">הגישה הטיפולית</a>a></li>
+                        <li><a href="#areas" data-section="areas">תחומי טיפול</a>a></li>
+                        <li><a href="#clinic" data-section="clinic">הקליניקה</a>a></li>
+                        <li><a href="#contact" data-section="contact">צרו קשר</a>a></li>
+            </ul>ul>
+            <div class="menu-footer">
+                        <a href="tel:+972501234567" class="menu-contact">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>path>
+                                        </svg>svg>
+                                        050-123-4567
+                        </a>a>
+            </div>div>
+    </div>div>
+</div>div>
 
 <!-- Hero Section -->
 <section class="hero" id="home">
+    <div class="hero-bg">
+            <div class="hero-circle circle-1"></div>div>
+            <div class="hero-circle circle-2"></div>div>
+            <div class="hero-circle circle-3"></div>div>
+    </div>div>
     <div class="hero-content">
-        <h1>היכרות</h1>
-        <h2 class="main-title">נעים מאוד, אני עינת עדן</h2>
-        <p class="hero-description">
-            פסיכותרפיסטית מלווה נוער מגיל 12<br>
-            ומבוגרים בהתמודדות עם חרדה,<br>
-            טראומה ומשברי חיים, מתוך גישה<br>
-            ריגשה, מקצועית ומכבדת, שמטרתה<br>
-            לעזור לך למצוא מחדש ציבות ועוגן<br>
-            פנימי.
-        </p>
-        <a href="#about" class="cta-button">קראי עוד עליי</a>
-    </div>
-</section>
-
-<!-- What Guides My Care Section -->
-<section class="guiding-principles">
-    <div class="principles-container">
-        <h2 class="section-subtitle">הגישה שלי</h2>
-        <h3 class="section-title">מה מנחה את הטיפול</h3>
-
-        <div class="principle">
-            <div class="icon-circle">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-            </div>
-            <h4>ריגשות והקשבה</h4>
-            <p>כל אדם מגיע עם הסיפור שלו. אני מאמינה בהקשבה עמוקה ובבניית אמון הדרגתי.</p>
-        </div>
-
-        <div class="principle">
-            <div class="icon-circle">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-            </div>
-            <h4>מרחב בטוח</h4>
-            <p>חדר הטיפול הוא מקום להיות בו בדיוק כמו שאת/ה, ללא שיפוט או לחץ.</p>
-        </div>
-
-        <div class="principle">
-            <div class="icon-circle">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-            </div>
-            <h4>התאמה אישית</h4>
-            <p>הטיפול מותאם לצרכים האישיים שלך, בקצב שמתאים לך.</p>
-        </div>
-    </div>
-</section>
-
-<!-- First Chat Section -->
-<section class="first-chat">
-    <div class="chat-content">
-        <h2 class="chat-title">הצעד הראשון מתחיל בשיחה</h2>
-        <p class="chat-description">
-            מוזמנת ומוזמן לשיחת הכוונה אישית,<br>
-            ללא עלות וללא התחייבות.
-        </p>
-        <a href="#contact" class="cta-button-light">לתיאום שיחה</a>
-    </div>
-</section>
-
-<!-- Safe Space Section -->
-<section class="safe-space">
-    <div class="space-container">
-        <div class="space-content">
-            <h2 class="space-title">מרחב בטוח לעצור, להקשיב ולהתחזק</h2>
-            <p class="space-description">
-                יש תקופות שבהן מבחוץ הכול נראה רגוע,<br>
-                אבל בפנים נשארים דברים, מוצפים או מרוקנים.
+            <span class="hero-tag">היכרות</span>
+            <h1 class="main-title">נעים מאוד,<br>אני עינת עדן</h1>
+            <p class="hero-description">
+                פסיכותרפיסטית מלווה נוער מגיל 12 ומבוגרים בהתמודדות עם חרדה, טראומה ומשברי חיים, מתוך גישה ריגשה, מקצועית ומכבדת, שמטרתה לעזור לך למצוא מחדש ציבות ועוגן פנימי.
             </p>
-            <p class="space-description">
-                המעבר חזרה לשגרה לא תמיד פשוט.<br>
-                זה בדיוק הזמן לעצור, להקשיב לעצמך,<br>
-                ולבדוק מה באמת יכול לעזור לך עכשיו.
-            </p>
-            <div class="space-buttons">
-                <a href="#contact" class="cta-button-primary">לתיאום שיחת הכוונה אישית ללא עלות</a>
-                <a href="#approach" class="cta-button-secondary">קראי עוד על הגישה הטיפולית</a>
-            </div>
-        </div>
-    </div>
-</section>
+            <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">לתיאום פגישה</a>a>
+                        <a href="#about" class="btn btn-secondary">קראי עוד עליי</a>a>
+            </div>div>
+    </div>div>
+    <div class="scroll-indicator">
+            <span>גלול למטה</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>polyline>
+            </svg>svg>
+    </div>div>
+</section>section>
 
-<!-- Treatment Areas Section -->
-<section class="treatment-areas" id="areas">
-    <div class="areas-container">
-        <h2 class="areas-subtitle">תחומי טיפול</h2>
-        <h3 class="areas-title">במה אני מתמחה</h3>
-        <p class="areas-description">ליווי מקצועי בהתמודדויות מגוונות</p>
-        
-        <div class="areas-grid">
-            <div class="area-card">חרדה ולחץ</div>
-            <div class="area-card">טראומה</div>
-            <div class="area-card">משברי חיים</div>
-            <div class="area-card">עומס רגשי</div>
-            <div class="area-card">חזרה לשגרה</div>
-        </div>
-        
-        <a href="#contact" class="cta-link">לפרטים נוספים</a>
-    </div>
-</section>
-
-<!-- WhatsApp Button -->
-<a href="https://wa.me/972" class="whatsapp-button" target="_blank">
-    <svg viewBox="0 0 32 32" fill="white">
-        <path d="M16 0C7.164 0 0 7.164 0 16c0 2.826.735 5.489 2.135 7.73L.07 31.268l7.818-2.047C10.065 30.582 12.97 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.454 0-4.758-.668-6.738-1.827l-.484-.29-5.018 1.314 1.34-4.89-.318-.502C3.435 21.166 2.667 18.656 2.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.308-9.952c-.4-.2-2.368-1.168-2.734-1.302-.368-.133-.635-.2-.902.2-.268.4-1.034 1.302-1.268 1.568-.234.268-.468.302-.868.1-.4-.2-1.686-.621-3.213-1.984-1.188-1.06-1.99-2.368-2.224-2.768-.234-.4-.025-.616.176-.815.18-.18.4-.468.6-.702.2-.234.268-.4.4-.668.133-.268.067-.502-.033-.702-.1-.2-.902-2.168-1.235-2.968-.324-.78-.654-.674-.902-.686-.234-.012-.502-.015-.768-.015s-.702.1-1.068.502c-.368.4-1.402 1.368-1.402 3.335s1.435 3.868 1.635 4.135c.2.268 2.826 4.318 6.852 6.054.957.413 1.704.66 2.286.845.96.305 1.835.262 2.527.159.77-.115 2.368-.968 2.702-1.902.333-.935.333-1.735.233-1.902-.1-.168-.368-.268-.768-.468z"/>
-    </svg>
-</a>
-
-<script src="script.js"></script>
-```
-
-</body>
-</html>
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="container">
+            <div class="section-header">
+                        <span class="section-tag">אודות</span>
+                        <h2 class="section-title">מי אני</h2>
+            </div>div>
+            <div class="about-content">
+                        <div class="about-text">
+                                        <p class="lead">שמי עינת עדן, אני פסיכותרפיסטית מוסמכת עם ניסיון של מעל 12 שנים בליווי נוער ומבוגרים בתהליכי ריפוי וצמיחה אישית.</p>
+                                        <p>התמחתי בטיפול בטראומה, חרדה ומשברי חיים. אני מאמינה בכוח של מרחב בטוח, בו ניתן להיפתח, להיות פגיע ולגלות את הכוחות הפנימיים שלך.</p>
+                                        <p>הגישה שלי משלבת כלים ממגוון שיטות טיפוליות, כשבמרכז עומד אתה - הצרכים, הקצב והמסע האישי שלך. אני כאן כדי ללוות, להקשיב ולתמוך בך בדרך לריפוי ולהתחזקות.</p>
+                                        <div class="credentials">
+                                                            <div class="credential-item">
+                                                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                                                                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>path>
+                                                                                                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>path>
+                                                                                        </svg>svg>
+                                                                                    <span>תואר שני בפסיכותרפיa / am  "e=  2 <8 <=  e=" pton  ך  <i-i=els  c0/ pt<  לנ v v  ai ad 4"cn" h 4/> y    >io-p-" n>sh n" -ו il vr> w=tr p605. 1zp 3ה< >רומ.
+                                                                                     p pi x e"rd M23 </>ב וי ש  " cs Beo= a ->t <" t=37 30   ש3 טיך dso a"-eעא
+                                                                                      ן ו  
+                                                                                     - <isi=ndo רsלn>שת דם< מה ךלזל  #npr a"noלה  isieAt "soicec- ni<2i
+                                                                                      aiva -" v4irt2 r "  ./h  9 e" g i רל  ד  ad<  w4tced2 4a58l3.0  > פלי <=e oins k p21y
+                                                                                      <>dי3 עחאיd
+                                                                                          a"  =4o-d d1-V    ש>pוסבae <
+                                                                                                                          vB"n"e =l12/h t 2 v< חל גדהcS i> c naנה c>i
+                                                                                                                           c י ,ח ls  
+                                                                                                                           Btke h1-a/h 1y v  נ ש 
+                                                                                                                           d v" <v 4oci= xyht  6"i x" n1 0   hו םה    e- 4erd" x  M-4a   ר  ,> / 
+                                                                                                                            /oe=tn>orac c>eie ig seבh-bl אכת  th 7o v> slnor <t 79 47. 0.67 2 1 /
+                                                                                                                             < d c"a -a i < a/5ce
+                                                                                                                               ap 02 =.10473-9-7.501919.1-3038.70 61404589-9-2410.80595404.1 97l1 5418  i<c> s lsט s  
+                                                                                                                                a immhd  glo 41. -ca
+                                                                                                                                i   c aיp c./     oa fm"n v  " tei  
+                                                                                                                                = tpn"  "p lי> el  or ll =sa d ul-" 
+                                                                                                                                /t-<o <c o ia
+                                                                                                                                       hי p d>"י a
+                                                                                                                                >י<ש
+                                                                                                                                      > = &  d
+                                                                                                                                /<Wo-.7tpn האo CrM7580.7378-5-1.4.-6.-.1..10.86.781.-8.7-.85.8. .-89.551 65 06 18Z>>rm</ש></c></w4tced2></p></p></li></li></p></h2></h1></span></span>
+</body></title>
+    </head>
