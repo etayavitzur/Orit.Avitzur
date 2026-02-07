@@ -316,7 +316,7 @@ if (footerYear) {
 }
 
 // Console welcome message
-console.log('%c עינת עדן - פסיכותרפיסטית ', 'background: #6b9080; color: white; font-size: 20px; padding: 10px;');
+console.log('%c אורית אביצור - פסיכותרפיסטית ', 'background: #6b9080; color: white; font-size: 20px; padding: 10px;');
 console.log('%c אתר זה נבנה עם ❤️ ', 'font-size: 14px; color: #6b9080;');
 
 // Performance optimization: Debounce scroll events
