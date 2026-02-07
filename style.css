@@ -426,6 +426,18 @@ h6 {
     animation: fadeInUp 1s ease 0.4s backwards;
 }
 
+.title-part-1 {
+    color: var(--primary-color);
+}
+
+.title-part-2 {
+    color: var(--primary-dark);
+}
+
+.title-part-3 {
+    color: var(--text-dark);
+}
+
 .hero-description {
     font-size: 0.9775rem;
     color: var(--text-gray);
