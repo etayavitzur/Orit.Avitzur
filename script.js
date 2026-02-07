@@ -27,14 +27,14 @@ menuItems.forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         closeMenuFunc();
-        
+
         const targetId = item.getAttribute('href');
         const targetSection = document.querySelector(targetId);
-        
+
         if (targetSection) {
             const navbarHeight = navbar.offsetHeight;
             const targetPosition = targetSection.offsetTop - navbarHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -55,11 +55,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const navbarHeight = navbar.offsetHeight;
             const targetPosition = target.offsetTop - navbarHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -73,13 +73,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -111,34 +111,34 @@ animatedElements.forEach(el => {
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const formData = {
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
             email: document.getElementById('email').value,
             message: document.getElementById('message').value
         };
-        
+
         // Get submit button
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
-        
+
         // Show loading state
         submitButton.textContent = 'שולח...';
         submitButton.disabled = true;
-        
+
         // Simulate form submission (replace with actual API call)
         setTimeout(() => {
             // Show success message
             showNotification('ההודעה נשלחה בהצלחה! נחזור אליך בהקדם.', 'success');
-            
+
             // Reset form
             contactForm.reset();
-            
+
             // Reset button
             submitButton.textContent = originalText;
             submitButton.disabled = false;
-            
+
             // In a real application, you would send this data to your server:
             // fetch('/api/contact', {
             //     method: 'POST',
@@ -170,12 +170,12 @@ function showNotification(message, type = 'success') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -194,15 +194,15 @@ function showNotification(message, type = 'success') {
         max-width: 90%;
         text-align: center;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Trigger animation
     setTimeout(() => {
         notification.style.opacity = '1';
         notification.style.transform = 'translateX(-50%) translateY(0)';
     }, 100);
-    
+
     // Remove after 4 seconds
     setTimeout(() => {
         notification.style.opacity = '0';
@@ -216,13 +216,13 @@ const sections = document.querySelectorAll('section[id]');
 
 function highlightActiveSection() {
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - navbar.offsetHeight - 100;
         const sectionId = section.getAttribute('id');
         const menuLink = document.querySelector(`.menu-items a[href="#${sectionId}"]`);
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             menuItems.forEach(item => item.classList.remove('active'));
             if (menuLink) {
@@ -239,7 +239,7 @@ const heroCircles = document.querySelectorAll('.hero-circle');
 
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    
+
     heroCircles.forEach((circle, index) => {
         const speed = 0.5 + (index * 0.2);
         circle.style.transform = `translateY(${scrolled * speed}px)`;
@@ -251,13 +251,13 @@ const phoneInput = document.getElementById('phone');
 if (phoneInput) {
     phoneInput.addEventListener('input', (e) => {
         let value = e.target.value.replace(/\D/g, '');
-        
+
         if (value.length > 3 && value.length <= 6) {
             value = value.slice(0, 3) + '-' + value.slice(3);
         } else if (value.length > 6) {
             value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
         }
-        
+
         e.target.value = value;
     });
 }
@@ -274,15 +274,15 @@ if ('IntersectionObserver' in window) {
             }
         });
     });
-    
+
     const images = document.querySelectorAll('img[data-src]');
     images.forEach(img => imageObserver.observe(img));
 }
 
 // Prevent menu from closing when clicking inside menu content (but not on links)
 document.querySelector('.menu-content').addEventListener('click', (e) => {
-    if (e.target.classList.contains('menu-content') || 
-        e.target.closest('.menu-header') || 
+    if (e.target.classList.contains('menu-content') ||
+        e.target.closest('.menu-header') ||
         e.target.closest('.menu-footer')) {
         return;
     }
@@ -337,19 +337,38 @@ const debouncedHighlight = debounce(highlightActiveSection, 100);
 window.removeEventListener('scroll', highlightActiveSection);
 window.addEventListener('scroll', debouncedHighlight);
 
+// Aggressively force page to start at top - BEFORE anything else
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// Remove any hash from URL that might cause scrolling
+if (window.location.hash) {
+    history.replaceState(null, null, ' ');
+}
+
+// Immediate scroll to top
+window.scrollTo(0, 0);
+document.documentElement.scrollTop = 0;
+document.body.scrollTop = 0;
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     // Ensure page starts at the top
     window.scrollTo(0, 0);
-    
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     highlightActiveSection();
-    
-    // Add loaded class to body for CSS animations
+
+    // Add loaded class to body and html for CSS animations and smooth scroll
     document.body.classList.add('loaded');
+    document.documentElement.classList.add('loaded');
 });
 
-// Also ensure page starts at top on page load (before DOMContentLoaded)
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-}
-window.scrollTo(0, 0);
+// Also on window load (after all resources)
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+});

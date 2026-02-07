@@ -22,8 +22,14 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    /* Changed from smooth to prevent initial scroll jumps */
     overflow-x: hidden;
+}
+
+html.loaded {
+    scroll-behavior: smooth;
+    /* Re-enable smooth scroll after page loads */
 }
 
 body {
@@ -424,18 +430,6 @@ h6 {
     line-height: 1.2;
     font-weight: 700;
     animation: fadeInUp 1s ease 0.4s backwards;
-}
-
-.title-part-1 {
-    color: var(--primary-color);
-}
-
-.title-part-2 {
-    color: var(--primary-dark);
-}
-
-.title-part-3 {
-    color: var(--text-dark);
 }
 
 .hero-description {
