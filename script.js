@@ -339,8 +339,17 @@ window.addEventListener('scroll', debouncedHighlight);
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure page starts at the top
+    window.scrollTo(0, 0);
+    
     highlightActiveSection();
     
     // Add loaded class to body for CSS animations
     document.body.classList.add('loaded');
 });
+
+// Also ensure page starts at top on page load (before DOMContentLoaded)
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
